@@ -4,25 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TravelBloom</title>
-  <link rel="stylesheet" href="travel_recommendation.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://wallup.net/wp-content/uploads/2019/09/344761-boeing-747-airliner-aircraft-plane-airplane-boeing-747-transport-36-2.jpg');
+      height:100vh;
+      background-size:cover;
+      color:white;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #007BFF;
+      padding: 10px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+    }
+    nav a, nav button {
+      color: white;
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav input {
+      padding: 5px;
+      font-size: 14px;
+    }
+    #mainContent {
+      padding: 20px;
+    }
+    img {
+      width: 40%;
+      max-height: 150px;
+
+    }
+  </style>
 </head>
 <body>
   <nav>
     <h1>TravelBloom</h1>
     <ul>
-      <li><a href="#" id="homeLink">Home</a></li>
-      <li><a href="#" id="aboutLink">About Us</a></li>
-      <li><a href="#" id="contactLink">Contact Us</a></li>
-      <li>
-        <input type="text" id="searchInput" placeholder="Enter destination">
-        <button id="btnSearch">Search</button>
-        <button id="btnClear">Clear</button>
-      </li>
+      <li><button id="homeLink">Home</button></li>
+      <li><button id="aboutLink">About Us</button></li>
+      <li><button id="contactLink">Contact Us</button></li>
     </ul>
+    <div>
+      <input type="text" id="searchInput" placeholder="Search">
+      <button id="btnSearch">Search</button>
+      <button id="btnClear">Clear</button>
+    </div>
   </nav>
-  <div id="mainContent" class="container">
-    <!-- Content will be dynamically loaded here -->
+  <div id="mainContent">
+    <!-- Static content for Home Page -->
+    <h1>Explore Dream Destinations</h1>
+    <p>Plan, explore, and book your dream vacations with ease. Discover unique destinations and enjoy seamless travel experiences!</p>
+    <button id="bookNow">Book Now</button>
+    <div>
+    <a href="https://r.search.yahoo.com/_ylt=AwrKEk_PTExnKwIAn.K7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1734263247/RO=10/RU=https%3a%2f%2fin.linkedin.com%2f/RK=2/RS=iqxlOI.TgP2EbpoNp..EhrXWmPo-">LinkedIn</a><a href="https://x.com/login">Twitter</a><a href="https://r.search.yahoo.com/_ylt=AwrKDw8zTUxnzwIAV.67HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1734263348/RO=10/RU=https%3a%2f%2fwww.instagram.com%2faccounts%2flogin%2f/RK=2/RS=MP_MFhHJMSIE7.iglwTvHlIX8tQ-">Instagram</a>
+    </div>
+</div>
+
+  <!-- About Us Section (Placed Directly in HTML) -->
+  <div id="aboutUs" style="display: none;">
+    <h1>About TravelBloom</h1>
+    <p>TravelBloom is your travel companion for exploring dream destinations.</p>
+    <h2>Meet Our Team</h2>
+    <ul>
+      <li>John Doe - CEO</li>
+      <li>Jane Smith - Marketing Head</li>
+      <li>Emily Davis - Travel Consultant</li>
+    </ul>
   </div>
+
+  <!-- Contact Us Section (Placed Directly in HTML) -->
+  <div id="contactUs" style="display: none;">
+    <h1>Contact Us</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <label for="message">Message:</label>
+      <textarea id="message" placeholder="Write your message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+
   <script src="travel_recommendation.js"></script>
+
 </body>
 </html>
